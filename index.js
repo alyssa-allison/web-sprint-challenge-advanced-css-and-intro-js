@@ -240,11 +240,18 @@ it takes one argument of data
 it returns an array with names of artists who were born in and died in 20th century (1900-2000) 
 example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
-
-function get20s(){
-  
-    
-  
+const newArray = [];
+function get20s(array){
+  let artists[i].years = parseInt(artists[i].years);
+  for (i = 0; i < array.length; i++){
+    if (artists[i].years >= 1900){
+      newArray.push(artists[i].name);
+    }
+    if (artists[i].years <= 2000){
+      newArray.push(artists[i].name);
+    }
+  }
+  return array;
 }
 
 
@@ -296,10 +303,16 @@ Create a function called lotsOfArt() that takes one argument:
 and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
-
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+const newArray = []
+function lotsOfArt(array){
+  for (let i = 0; i < array.length; i++){
+    if (array[i].paintings > 100){
+      newArray.push(array[i].paintings);
+    }
+  }
+  return array;
 }
+console.log(lotsOfArt(artists));
 
 
 
